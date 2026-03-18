@@ -1,0 +1,19 @@
+# Credentials and Secrets
+.env
+*.token
+*.key
+
+# Environments
+venv/
+env/
+.venv/
+ENV/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# OS generated files
+.DS_Store
+Thumbs.db
