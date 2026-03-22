@@ -271,5 +271,3 @@ Finance-RAG/
 > Never commit your `.env` file. Make sure it is listed in `.gitignore`.
 
 ---
-
-*Built to demonstrate production-grade RAG infrastructure for financial document analysis. © 2026 Tenkai*
