@@ -17,6 +17,7 @@ spec:
         image: 628263975501.dkr.ecr.us-east-1.amazonaws.com/tenkai-frontend:latest
         ports:
         - containerPort: 8501
+        command: ["streamlit", "run", "streamlit_app.py", "--server.port=8501", "--server.address=0.0.0.0"]
         env:
         - name: API_URL
           value: "http://tenkai-api-service:8000"
