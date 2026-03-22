@@ -1,0 +1,38 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: tenkai-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: tenkai-api
+  template:
+    metadata:
+      labels:
+        app: tenkai-api
+    spec:
+      containers:
+      - name: tenkai-api
+        image: 628263975501.dkr.ecr.us-east-1.amazonaws.com/tenkai-api:latest
+        ports:
+        - containerPort: 8000
+        env:
+        - name: OPENAI_API_KEY
+          value: "your_openai_key"
+        - name: PINECONE_API_KEY
+          value: "your_pinecone_key"
+        - name: PINECONE_INDEX
+          value: "finsight"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: tenkai-api-service
+spec:
+  selector:
+    app: tenkai-api
+  ports:
+  - port: 8000
+    targetPort: 8000
+  type: ClusterIP
