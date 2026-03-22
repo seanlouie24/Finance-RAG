@@ -13,6 +13,8 @@
 
 **Live Demo:** [tenkai-frontend.onrender.com](https://tenkai-frontend.onrender.com)
 
+> The app was originally deployed on AWS EKS with a Kubernetes-managed load balancer for production-grade orchestration (see screenshots below). It was subsequently migrated to Render's free tier to keep a persistent live link without incurring ongoing AWS costs. The full EKS deployment is documented and reproducible from the instructions in this README.
+
 ---
 
 ## What is Tenkai?
